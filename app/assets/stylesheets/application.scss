@@ -12,4 +12,14 @@
  *
 */
 @import "bootstrap";
+@import "practices";
 
+body 
+{
+  min-height: 75rem;
+  padding-top: 3.5rem;
+}
+.bg-dark
+{
+	background-color: #050505 !important;
+}

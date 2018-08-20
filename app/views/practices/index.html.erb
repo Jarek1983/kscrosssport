@@ -1,41 +1,40 @@
+<section class="container">
+  <div class="row">
+      <div class="col-md-12">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Practices</h1>
+<h2>Practices</h2>
+      </div>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Boxtitle</th>
-      <th></th>
-      <th>Boxinfo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
     <% @practices.each do |practice| %>
-      <tr>
-        <td><%= practice.title %></td>
-        <td>
+      <div class="col-md-4">
+        <div class="card"> 
+          <div class="card-topper">
           <% if practice.picone.present? %>
-          <%= image_tag practice.picone.url(:thumb) %>
+          <%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
           <% else %>
           No image
           <% end %>
-          </td>
-        <td><%= practice.subtitle %></td>
-        <td><%= practice.boxtitle %></td>
-        <td><%= practice.boxinfo %></td>
-        <td><%= link_to 'Show', practice %></td>
-        <td><%= link_to 'Edit', edit_practice_path(practice) %></td>
-        <td><%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+          </div>
+  <div class="card-block">
+       <h4 class="card-title">
+          <%= practice.boxtitle %>
+       </h4>
+        <%= link_to 'LEARN MORE', practice %>
+        <%= link_to 'Edit', edit_practice_path(practice) %>
+        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+      </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
+  
 
 <br>
 
 <%= link_to 'New Practice', new_practice_path %>
+</section>
