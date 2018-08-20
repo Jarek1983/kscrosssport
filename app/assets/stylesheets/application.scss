@@ -13,6 +13,7 @@
 */
 @import "bootstrap";
 @import "practices";
+@import "footer";
 
 body 
 {
@@ -22,4 +23,35 @@ body
 .bg-dark
 {
 	background-color: #050505 !important;
+}
+h5
+{
+	font-family: Helvetica, sans-serif;
+	color: #fff;
+	padding-botoom: 1rem;
+	text-transform: uppercase;
+}
+
+h6
+{
+	font-family: Helvetica, sans-serif;
+	color: #999;
+	line-height: 1.8;
+	text-shadow: 1px 1px 1px #000000;
+	text-transform: uppercase;
+}
+
+.floatr
+{
+	float: right;
+}
+
+.top-margin
+{
+	margin-top: 1rem;
+}
+
+.bottom-margin
+{
+	margin-bottom: 1rem;
 }
