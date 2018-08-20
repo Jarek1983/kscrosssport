@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @practice.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @practice.subtitle %>
+</p>
+
+ <p>
+  <strong>Boxtitle:</strong>
+   <% if @practice.picone.present? %>
+  <%= image_tag @practice.picone.url(:medium) %>
+  <% else %>
+  No image
+  <% end %>
+</p>
+
+<p>
+  <strong>Boxtitle:</strong>
+  <%= @practice.boxtitle %>
+</p>
+
+<p>
+  <strong>Boxinfo:</strong>
+  <%= @practice.boxinfo %>
+</p>
+
+<%= link_to 'Edit', edit_practice_path(@practice) %> |
+<%= link_to 'Back', practices_path %>

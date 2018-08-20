@@ -1,0 +1,5 @@
+class Practice < ApplicationRecord
+
+	has_attached_file :picone, styles: {large: "1500x500>", mediun: "500x400>", thumb: "200x150#"}
+	validates_attachment_content_type :picone, content_type: /\Aimage\/.*\z/
+end
