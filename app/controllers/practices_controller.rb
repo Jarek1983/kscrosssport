@@ -7,6 +7,10 @@ class PracticesController < ApplicationController
     @practices = Practice.all.order("created_at DESC").limit(3)
   end
 
+  def practice_list
+    @practices = Practice.all.order("created_at DESC")
+  end
+
   # GET /practices/1
   # GET /practices/1.json
   def show

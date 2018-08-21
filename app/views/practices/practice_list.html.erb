@@ -1,16 +1,10 @@
 <section class="container">
-  <div class="row">
-      <div class="col-md-12">
-
-<p id="notice"><%= notice %></p>
-
-<br>
-<br>
-<h2>Practices</h2>
-      </div>
-    </div>
-
-<div class="row">
+	<div class="row", style="padding-top: 60px;">
+		
+		<div class="col-md-6"><h2><u>All Practices</u></h2></div>
+		<div class="col-md-6"></div>
+	</div>
+	<div class="row", style="padding-top: 30px;">
     <% @practices.each do |practice| %>
       <div class="col-md-4">
         <div class="card"> 
@@ -33,9 +27,4 @@
       </div>
     <% end %>
 </div>
-  
-<br>
-
-<%= link_to 'All Practices', practice_list_practices_path %>
-<%= link_to 'New Practice', new_practice_path %>
 </section>
