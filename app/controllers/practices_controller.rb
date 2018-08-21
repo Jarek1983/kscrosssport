@@ -8,7 +8,10 @@ class PracticesController < ApplicationController
   end
 
   def practice_list
-    @practices = Practice.all.order("created_at DESC")
+    @page = params['page'].to_i
+    @next_page = @page + 1 unless Practice.count < 8
+    @prev_page = @page - 1 unless @page == 0
+    @practices = Practice.all.order("created_at DESC").limit(8).offset(@page*8)
   end
 
   # GET /practices/1
