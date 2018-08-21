@@ -4,13 +4,21 @@ class PracticesController < ApplicationController
   # GET /practices
   # GET /practices.json
   def index
-    @practices = Practice.all
+    @practices = Practice.all.order("created_at DESC").limit(3)
   end
 
   # GET /practices/1
   # GET /practices/1.json
   def show
   end
+
+  def search
+    if params[:search].blank?
+      @practices = Practice.all.order("created_at DESC").limit(20)
+    else
+      @practices = Practice.search(params)
+    end      
+  end 
 
   # GET /practices/new
   def new

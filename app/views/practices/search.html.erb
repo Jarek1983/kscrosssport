@@ -1,0 +1,42 @@
+<section class="container">
+	<div class="row">
+		<div class="col"></div>
+		<div class="col-md-10", style="margin-bottom: 1rem;">
+			<h2 style="margin-top:2rem;"><u>Your Search Result</u></h2>
+				<table class="table table-hover table-striped table-responsive", style="border-bottom: 1px solid #ddd;">
+					<thead>
+
+					</thead>
+
+					<tbody>
+						<% c = 0 %>
+						<% @practices.each do |practice| %>
+					<tr>
+						<td>
+							<% if practice.picone.present? %>
+          					<%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
+          					<% else %>
+          						No image
+          					<% end %>	
+          				</td>
+
+						<td>
+							<%= practice.boxtitle %>
+						</td>
+						<td>
+							<%= truncate(practice.boxinfo, length: 50) %>
+						</td>
+						<td> <%= link_to 'LEARN MORE', practice %>
+						</td>
+					</tr>
+							<% c = c + 1 %>
+							<% end %>
+							<h4>There are <%= c %> containing your search</h4>
+					</tbody>
+
+				</table>
+
+		</div>
+		<div class="col"></div>
+	</div>
+</section>

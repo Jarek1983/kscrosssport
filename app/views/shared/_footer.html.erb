@@ -35,10 +35,17 @@
 		</div>
 		<div class="col-lg-6">
 			
-        <form class="form-inline mt-2 mt-md-0 floatr">
+<div class="form-inline mt-2 mt-md-0 floatr">
+	<%= form_tag search_practices_path, method: :get do %>
+	<%= text_field_tag :search, nil, placeholder: "Search Practice", class:"form-control mr-sm-2 bg-dark" %>
+	<%= submit_tag "Search", class:"btn btn-outline-info my-2 my-sm-0" %>
+	<% end %>
+</div>
+
+<!--        <form class="form-inline mt-2 mt-md-0 floatr">
           <input class="form-control mr-sm-2 bg-dark" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 		</div>
 			</div>
 	</div>
