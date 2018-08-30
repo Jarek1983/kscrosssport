@@ -8,10 +8,20 @@ class PracticesController < ApplicationController
   end
 
   def practice_list
+
+    @allpractices = Practice.count
+    @num_pages = @allpractices/6.0
+    @mod_pages = @num_pages % 1.0
+    @mod_pages = 1.0 - @mod_pages
+      if @mod_pages != 0
+         @num_pages = @num_pages + @mod_pages
+       else
+        @num_pages = @num_pages
+      end
     @page = params['page'].to_i
-    @next_page = @page + 1 unless Practice.count < 8
+    @next_page = @page + 1 unless Practice.count < 6
     @prev_page = @page - 1 unless @page == 0
-    @practices = Practice.all.order("created_at DESC").limit(8).offset(@page*8)
+    @practices = Practice.all.order("created_at DESC").limit(6).offset(@page*6)
   end
 
   # GET /practices/1

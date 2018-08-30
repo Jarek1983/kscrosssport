@@ -10,22 +10,29 @@
 	<% end %>
 			</div>
 		</div>
-		<div class="col-md-12">
-		<% if @practices.count >= 8 %>
+		<div class="col-md-6">
+			<% if @practices.count < 6 %>
+			Sorry, this is the last practices.
+			You are on <%= @page + 1%> out of <%= @num_pages.to_i%> pages.<br>
+			<% else %>
+			There are <%= @allpractices %> practices articles.<br>
+			You are on <%= (@page + 1)%> out of <%= @num_pages.to_i%> pages.<br>
+			<% end %>
+		</div>
+			<div class="col-md-6">
+		<% if @practices.count >= 6 %>
 			<%= link_to 'Next', practice_list_practices_path(:page => @next_page), class: "btn-sm btn-info floatr", style: "margin: 2px;" %>
 		<% end %>
 			<% if @page > 0 %>
 
 			<%= link_to 'Previous', practice_list_practices_path(:page => @prev_page), class: "btn-sm btn-info floatr", style: "margin: 2px;" %>
 			<% end %>
-			<% if @practices.count < 8 %>
-			Sorry, this is the last practice
-			<% end %>
+			
 		</div>
 	</div>
 	<div class="row", style="padding-top: 30px;">
     <% @practices.each do |practice| %>
-      <div class="col-md-3">
+      <div class="col-md-4 style="margin-bottom:1rem">
         <div class="card"> 
           <div class="card-topper">
           <% if practice.picone.present? %>
@@ -38,7 +45,7 @@
        <h4 class="card-title">
           <%= practice.boxtitle %>
        </h4>
-        <%= link_to 'LEARN MORE', practice %>
+        <%= link_to 'More', practice %>
         <%= link_to 'Edit', edit_practice_path(practice) %>
         <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>

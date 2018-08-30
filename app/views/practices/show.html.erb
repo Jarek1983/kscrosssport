@@ -1,5 +1,5 @@
 <section class="container">
-  <div class="row">
+  <div class="row", style="padding-top: 30px;">
       <div class="col-md-12">
 
 <p id="notice"><%= notice %></p>
@@ -18,7 +18,7 @@
     </div>
 
  <p>
-  <strong>Boxtitle:</strong>
+  <strong>Photo:</strong>
    <% if @practice.picone.present? %>
   <%= image_tag @practice.picone.url(:medium) %>
   <% else %>
@@ -27,12 +27,12 @@
 </p>
 
 <p>
-  <strong>Boxtitle:</strong>
+  <strong>Source:</strong>
   <%= @practice.boxtitle %>
 </p>
 
 <p>
-  <strong>Boxinfo:</strong>
+  <strong>Info:</strong>
   <%= @practice.boxinfo %>
 </p>
 
