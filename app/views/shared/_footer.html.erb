@@ -26,14 +26,14 @@
 		<div class="row top-margin bottom-margin">
 		<div class="col-lg-6">
 			<form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2 bg-dark" type="text" placeholder="Sigh Up" aria-label="Newsletter">
+          <input class="form-control mr-sm-2 bg-dark form-border" type="text" placeholder="Sigh Up" aria-label="Newsletter">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Submit</button>
         </form>
 		</div>
 		<div class="col-lg-6">
 			
 <div class="form-inline mt-2 mt-md-0 floatr">
-	<%= form_tag search_practices_path, method: :get do %>
+	<%= form_tag search_practices_path, class: "full_width", method: :get do %>
 	<%= text_field_tag :search, nil, placeholder: "Search Practice", class:"form-control mr-sm-2 bg-dark" %>
 	<%= submit_tag "Search", class:"btn btn-outline-info my-2 my-sm-0" %>
 	<% end %>
@@ -53,7 +53,7 @@
 			<span color="#eeeeee">Follow us: Twitter | Facebook | Youtube </span>
 		</div>
 		<div class="col-lg-6">
-			<span color="#eeeeee">&copy: Jaroslaw Zmijewski</span>
+			<span class="floatr" color="#eeeeee">&copy: Jaroslaw Zmijewski</span>
 		</div>
 			</div>
 		</div>

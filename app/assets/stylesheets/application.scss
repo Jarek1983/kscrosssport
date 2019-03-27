@@ -82,3 +82,36 @@ h6
 	margin-bottom: 3rem;
 }
 
+.form-border {
+	border: 0px solid;
+}
+
+.border_bottom
+{
+	border-bottom: 0px dashed #444444;
+	margin-bottom: 1rem;
+}
+
+.btn-outline-info
+{
+	border:#030303;
+	background-color: #050505;
+}
+
+@media only screen and (max-width: 576px),
+(min-device-width: 100px) and (max-device-width: 576px) {
+	.floatr {
+		float: left;
+		width: 100% !important;
+	}
+	.form-control {
+		width: 100% !important;
+	}
+	.full_width {
+		width: 50;
+	}
+	.card {
+		margin-bottom: 1rem !important;
+	}
+
+}
