@@ -6,11 +6,9 @@
        
         <p id="notice"><%= notice %></p>
 
-        <br>
-        <br>
         <h2>Practices</h2>
-              </div>
-            </div>
+      </div>
+    </div>
 
         <div class="row">
             <% @practices.each do |practice| %>
@@ -36,8 +34,11 @@
             <% end %>
         </div>
   
-    <br>
+        <div class="practice-bottom">
 
-    <%= link_to 'All Practices', practice_list_practices_path, class: 'btn btn-info' %>
-    <%= link_to 'New Practice', new_practice_path, class: 'btn btn-info'  %>
+          <%= link_to 'All Practices', practice_list_practices_path, class: 'btn btn-info' %>
+          <%= link_to 'New Practice', new_practice_path, class: 'btn btn-info'  %>
+
+        </div>
+
 </section>

@@ -17,11 +17,12 @@
 @import "navigation";
 @import "carousel";
 
-body 
-{
-  min-height: 75rem;
-  padding-top: 3.5rem;
-  font-family: 'Brandon Grotesque', 'brandon-grotesque-n7', 'brandon-grotesque', Helvetica, sans-serif;
+html { height: 100%; }
+body {
+    width: 100%;
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:[footer-height] 
 }
 .bg-dark
 {

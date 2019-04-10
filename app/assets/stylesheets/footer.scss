@@ -1,12 +1,9 @@
-.footer
-{
-	background-color: #121212;
-	padding-top: 3rem;
-	margin-top: 1rem;
-	width: 100%;
-	min-height: 150px;
-	line-height: 60px;
+.footer { 
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+    height: 60px;
 }
+
 
 .footer a
 {
@@ -25,4 +22,8 @@
 	border-bottom-color: #00eeff;
 }
 
+@media only screen and (max-width: 576px),
+(min-device-width: 100px) and (max-device-width: 576px) {
+
+}
 
