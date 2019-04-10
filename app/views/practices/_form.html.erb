@@ -13,20 +13,20 @@
   <% end %>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-12">
 
   <div class="field">
-    <%= form.label :title %><br>
+    <%= form.label :Tytuł %><br>
     <%= form.text_field :title, style:"width:100%" %>
   </div>
 
   <div class="field">
-    <%= form.label :subtitle %><br>
+    <%= form.label :Kategoria %><br>
     <%= form.text_field :subtitle, style:"width:100%" %>
   </div>
 
   <div class="field">
-    <%= form.label :Info %><br>
+    <%= form.label :Tekst %><br>
     <%= form.text_area :boxinfo, style:"width:100%" %>
   </div>
 
@@ -39,7 +39,7 @@
         <div class="card"> 
           <div class="card-topper">
   <div class="field">
-    <%= form.label :picone, style:"color:#eeeeee;" %>
+    <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
     <%= form.file_field :picone, style:"color:#eeeeee;"  %>
   </div>
  
@@ -47,7 +47,7 @@
     <div class="card-block">
  <h4 class="card-title">
   <div class="field">
-    <%= form.label :source %><br>
+    <%= form.label :Autor %><br>
     <%= form.text_field :boxtitle, style: "width:100%" %>
   </div>
   </h4>
@@ -55,9 +55,10 @@
       </div>
   </div>
 </div>
-  <div class="row", style="margin-top:1rem;">
+  <div class="row", style="margin-top:1rem; padding-bottom: 0.5rem">
     <div class="col-md-12">
       <%= form.submit 'Utwórz', class: "btn btn-warning" %>
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-info' %>
     </div>
   </div>
 <% end %>

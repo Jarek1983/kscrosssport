@@ -1,22 +1,23 @@
 <section class="container">
 	<div class="row", style="padding-top: 60px;">
 		
-		<div class="col-md-6"><h2><u>All Practices</u></h2></div>
+		<div class="col-md-6"><h2><u>Wiadomości</u></h2></div>
 		<div class="col-md-6">
 			<div class="form-inline mt-2 mt-md-0 floatr">
 	<%= form_tag search_practices_path, method: :get do %>
-	<%= text_field_tag :search, nil, placeholder: "Search Practice", class:"form-control mr-sm-2" %>
-	<%= submit_tag "Search", class:"btn btn-light" %>
+	<%= text_field_tag :search, nil, placeholder: "Czego szukasz?", class:"form-control mr-sm-2" %>
+	<%= submit_tag "Wyszukaj", class:"btn btn-light" %>
 	<% end %>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<% if @practices.count < 6 %>
-			Sorry, this is the last practices.
-			You are on <%= @page + 1%> out of <%= @num_pages.to_i%> pages.<br>
+			Przepraszam, to jest ostatnia wiadomości 
+			<!-- Sorry, this is the last practices. -->
+			Jesteś na <%= @page + 1%> z <%= @num_pages.to_i%> wiadomości.<br>
 			<% else %>
-			There are <%= @allpractices %> practices articles.<br>
-			You are on <%= (@page + 1)%> out of <%= @num_pages.to_i%> pages.<br>
+			Na stronie znajduje się <%= @allpractices %> wiadomości<br>
+			Jesteś na <%= (@page + 1)%> z <%= @num_pages.to_i%> podstron.<br>
 			<% end %>
 		</div>
 			<div class="col-md-6">
@@ -31,26 +32,27 @@
 		</div>
 	</div>
 	<div class="row", style="padding-top: 30px;">
-    <% @practices.each do |practice| %>
-      <div class="col-md-4 style="margin-bottom:1rem">
-        <div class="card"> 
-          <div class="card-topper">
-          <% if practice.picone.present? %>
-          <%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
-          <% else %>
-          No image
-          <% end %>
-          </div>
-  <div class="card-block">
-       <h4 class="card-title">
-          <%= practice.boxtitle %>
-       </h4>
-        <%= link_to 'More', practice %>
-        <%= link_to 'Edit', edit_practice_path(practice) %>
-        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-      </div>
-      </div>
+
+	    <% @practices.each do |practice| %>
+	       <div class="col-sm-6 col-md-4" style="padding: 0.5rem;">
+	        <div class="card"> 
+	          <div class="card-topper">
+	          <% if practice.picone.present? %>
+	          <%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
+	          <% else %>
+	          No image
+	          <% end %>
+	          </div>
+			  <div class="card-block">
+			       <h4 class="card-title">
+			          <%= practice.boxtitle %>
+			       </h4>
+			        <%= link_to 'More', practice %>
+			        <%= link_to 'Edit', edit_practice_path(practice) %>
+			        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %>
+			  </div>
+	      </div>
+    </div>
     <% end %>
 </div>
 </section>
