@@ -18,6 +18,7 @@
 @import "carousel";
 
 html { height: 100%; }
+
 body {
     width: 100%;
     min-height:100%; 
@@ -100,12 +101,19 @@ h6
 	background-color: #050505;
 }
 
+.padding_footer {
+	padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1199px),
+(min-device-width: 992px) and (max-device-width: 1199px) {
+	.padding_footer {
+		padding-top: 2rem;
+	}
+}
+
 @media only screen and (max-width: 576px),
 (min-device-width: 100px) and (max-device-width: 576px) {
-	.floatr {
-		float: left;
-		width: 100% !important;
-	}
 	.form-control {
 		width: 100% !important;
 	}
@@ -115,5 +123,4 @@ h6
 	.card {
 		margin-bottom: 1rem !important;
 	}
-
 }
