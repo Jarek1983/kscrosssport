@@ -37,8 +37,8 @@
 	       <div class="col-md-12 col-lg-6 col-xl-4">
 	        <div class="card"> 
 	          <div class="card-topper">
-	          <% if practice.picone.present? %>
-	          <%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
+	          <% if practice.image.present? %>
+	          <%= image_tag practice.image.url, style: "width:100%;" %>
 	          <% else %>
 	          No image
 	          <% end %>

@@ -34,9 +34,8 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem 'paperclip', '~> 6.0'
-gem 'paperclip-av-transcoder'
-gem 'aws-sdk-s3', '~> 1.9'
+gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -46,6 +45,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 

@@ -4,7 +4,7 @@ class PracticesController < ApplicationController
   # GET /practices
   # GET /practices.json
   def index
-    @practices = Practice.all.order("created_at DESC").limit(8)
+    @practices = Practice.all.order("created_at DESC").limit(6)
   end
 
   def practice_list
@@ -94,6 +94,6 @@ class PracticesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def practice_params
-      params.require(:practice).permit(:title, :subtitle, :boxtitle, :boxinfo, :banner, :picone, :pictwo, :video, :audio)
+      params.require(:practice).permit(:title, :subtitle, :boxtitle, :boxinfo, :banner, :image, :pictwo, :video, :audio)
     end
 end

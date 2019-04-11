@@ -19,8 +19,8 @@
 
  <p>
   <strong>Zdjęcie:</strong>
-   <% if @practice.picone.present? %>
-  <%= image_tag @practice.picone.url(:medium) %>
+   <% if @practice.image.present? %>
+  <%= image_tag @practice.image.url %>
   <% else %>
   No image
   <% end %>

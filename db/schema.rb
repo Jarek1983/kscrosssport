@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_30_104818) do
+ActiveRecord::Schema.define(version: 2019_04_11_182152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,6 @@ ActiveRecord::Schema.define(version: 2019_03_30_104818) do
     t.string "slidetitle2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "banner_file_name"
-    t.string "banner_content_type"
-    t.bigint "banner_file_size"
-    t.datetime "banner_updated_at"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -33,26 +29,7 @@ ActiveRecord::Schema.define(version: 2019_03_30_104818) do
     t.text "boxinfo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "banner_file_name"
-    t.string "banner_content_type"
-    t.bigint "banner_file_size"
-    t.datetime "banner_updated_at"
-    t.string "picone_file_name"
-    t.string "picone_content_type"
-    t.bigint "picone_file_size"
-    t.datetime "picone_updated_at"
-    t.string "pictwo_file_name"
-    t.string "pictwo_content_type"
-    t.bigint "pictwo_file_size"
-    t.datetime "pictwo_updated_at"
-    t.string "video_file_name"
-    t.string "video_content_type"
-    t.bigint "video_file_size"
-    t.datetime "video_updated_at"
-    t.string "audio_file_name"
-    t.string "audio_content_type"
-    t.bigint "audio_file_size"
-    t.datetime "audio_updated_at"
+    t.string "image"
   end
 
 end
