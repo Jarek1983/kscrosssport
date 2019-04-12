@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="padding-right: 3.5rem;">
 
-      <div class="navbar-brand" href="#" style="width:8rem;" >
-        <%=link_to (image_tag 'cross.jpg', style:"width:100%;"), root_path %>
+      <div class="navbar-brand" href="#" style="width:15rem;" >
+        <%=link_to (image_tag 'cross_sport.jpg', style:"width:100%;"), root_path %>
       </div>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,9 @@
             <%= link_to 'O nas', root_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
+            <%= link_to 'Team', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
             <%= link_to 'Kontakt', root_path, class: 'nav-link' %>
           </li>
         </ul>
@@ -28,13 +31,13 @@
             <%= link_to 'Crossfit', "https://www.crossfit.com/", class: 'nav-link' %>
           </li>
           <li class="nav-item2">
-            <%= link_to 'Jak zacząć?', root_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item2">
             <%= link_to 'Youtube', "https://www.youtube.com/user/michalbiey", class: 'nav-link' %>
           </li>
           <li class="nav-item2">
             <%= link_to 'Bestfit', "http://bestfitclub.pl", class: 'nav-link' %>
+          </li>
+          <li class="nav-item2">
+            <%= link_to 'Admin', root_path, class: 'nav-link' %>
           </li>
         </ul>
       </div>
