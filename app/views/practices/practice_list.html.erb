@@ -1,5 +1,5 @@
-<section class="container">
-	<div class="row", style="padding-top: 60px;">
+<section class="container pt-5">
+	<div class="row pt-5 mt-5">
 		
 		<div class="col-md-6"><h2><u>Wiadomości</u></h2></div>
 		<div class="col-md-6">
@@ -47,9 +47,9 @@
 			       <h4 class="card-title">
 			          <%= practice.boxtitle %>
 			       </h4>
-			        <%= link_to 'More', practice %>
-			        <%= link_to 'Edit', edit_practice_path(practice) %>
-			        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %>
+			        <%= link_to 'More', practice, class: 'btn btn-sm btn-primary' %>
+			        <%= link_to 'Edit', edit_practice_path(practice), class: 'btn btn-sm btn-info' %>
+			        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
 			  </div>
 	      </div>
     </div>

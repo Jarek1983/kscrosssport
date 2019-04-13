@@ -13,8 +13,8 @@
 						<% @practices.each do |practice| %>
 					<tr>
 						<td>
-							<% if practice.picone.present? %>
-          					<%= image_tag practice.picone.url(:thumb), style: "width:100%" %>
+							<% if practice.image.present? %>
+          					<%= image_tag practice.image.url, style: "width:100%" %>
           					<% else %>
           						No image
           					<% end %>	

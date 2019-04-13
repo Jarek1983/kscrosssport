@@ -35,25 +35,24 @@
 
 <div class="row", style="margin-top:1rem;">
 
-  <div class="col-md-4">
+      <div class="col-md-4">
         <div class="card"> 
           <div class="card-topper">
-  <div class="field">
-    <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
-    <%= form.file_field :image, style:"color:#eeeeee;"  %>
-  </div>
- 
+            <div class="field">
+              <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
+              <%= form.file_field :image, style:"color:#eeeeee;"  %>
+            </div>
           </div>
-    <div class="card-block">
- <h4 class="card-title">
-  <div class="field">
-    <%= form.label :Autor %><br>
-    <%= form.text_field :boxtitle, style: "width:100%" %>
-  </div>
-  </h4>
-    </div>
+          <div class="card-block">
+            <h4 class="card-title">
+              <div class="field">
+                <%= form.label :Autor %><br>
+                <%= form.text_field :boxtitle, style: "width:100%" %>
+              </div>
+            </h4>
+          </div>
+        </div>
       </div>
-  </div>
 </div>
   <div class="row", style="margin-top:1rem; padding-bottom: 0.5rem">
     <div class="col-md-12">
