@@ -1,0 +1,74 @@
+
+.login {
+	font-size: 1.2rem;
+	}
+.btn_login {
+	width: 100px;
+	background-color: #555555;
+	border-radius: 10px;
+	font-size: 18px;
+}
+.field {
+	font-size: 24px;
+	}
+
+@media only screen and (max-width: 1199px),
+(min-device-width: 992px) and (max-device-width: 1199px) {
+	.login {
+		font-size: 1.4rem;
+	}
+	.btn_login {
+		width: 100px;
+		background-color: #555555;
+		border-radius: 10px;
+		font-size: 20px;
+		}
+	.field {
+	font-size: 26px;
+	}
+}
+
+@media only screen and (max-width: 991px),
+(min-device-width: 768px) and (max-device-width: 991px) {
+	.login {
+		font-size: 1.6rem;
+	}
+	.btn_login {
+		background-color: #555555;
+		border-radius: 10px;
+		font-size: 22px;
+		}
+	.field {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 767px),
+(min-device-width: 600px) and (max-device-width: 767px) {
+	.login {
+		font-size: 1.8rem;
+	}
+	.btn_login {
+		background-color: #555555;
+		border-radius: 10px;
+		font-size: 26px;
+		}
+	.field {
+		font-size: 44px;
+	}
+}
+
+@media only screen and (max-width: 599px),
+(min-device-width: 100px) and (max-device-width: 599px) {
+	.login {
+		font-size: 2rem;
+	}
+	.btn_login {
+		background-color: #555555;
+		border-radius: 10px;
+		font-size: 30px;
+		}
+	.field {
+		font-size: 50px;
+	}
+}

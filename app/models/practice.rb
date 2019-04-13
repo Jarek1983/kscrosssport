@@ -4,6 +4,13 @@ class Practice < ApplicationRecord
   validates :subtitle, presence: true, length: {minimum: 3}
   validates :boxinfo, presence: true, length: {minimum: 15}
   validates :boxtitle, presence: true, length: {minimum: 3}
+  validates :image, presence: true
+
+  # validate :image_size_validation
+ 
+  # def image_size_validation
+  #   errors[:image] << "Za duży rozmiar zdjęcia" if image.size > 0.5.megabytes
+  # end
 
   belongs_to :user
 
