@@ -1,5 +1,7 @@
 class PracticesController < ApplicationController
-  before_action :set_practice, only: [:show, :edit, :update, :destroy]
+  before_action :find_practice, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index, :practice_list]
+  before_action :authorize_article, only: [:destroy, :edit, :update]
 
   # GET /practices
   # GET /practices.json
@@ -44,12 +46,15 @@ class PracticesController < ApplicationController
 
   # GET /practices/1/edit
   def edit
+    session[:practice_id] = @practice.id
+    return unless authorize_practice
   end
 
   # POST /practices
   # POST /practices.json
   def create
     @practice = Practice.new(practice_params)
+    @practice.user = current_user
 
     respond_to do |format|
       if @practice.save
@@ -88,12 +93,21 @@ class PracticesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_practice
+    def find_practice
       @practice = Practice.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def practice_params
-      params.require(:practice).permit(:title, :subtitle, :boxtitle, :boxinfo, :banner, :image, :pictwo, :video, :audio)
+      params.require(:practice).permit(:title, :subtitle, :boxtitle, :boxinfo, :banner, :image, :user_id)
     end
+
+    def authorize_article
+      if current_user != @practice.user && !current_user&.admin?
+        flash[:alert] = "You are not allowed to be here"
+        redirect_to practices_path
+      return false
+    end
+    true
+  end
 end

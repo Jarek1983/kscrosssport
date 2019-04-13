@@ -47,9 +47,17 @@
 			       <h4 class="card-title">
 			          <%= practice.boxtitle %>
 			       </h4>
-			        <%= link_to 'More', practice, class: 'btn btn-sm btn-primary' %>
-			        <%= link_to 'Edit', edit_practice_path(practice), class: 'btn btn-sm btn-info' %>
-			        <%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+                        <% if current_user && current_user&.admin? %>
+
+                          <%= link_to 'Pokaż', practice, class: 'btn btn-sm btn-primary' %>
+                          <%= link_to 'Edytuj', edit_practice_path(practice), class: 'btn btn-sm btn-info' %>
+                          <%= link_to 'Usuń', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+
+                            <% else %>
+
+                              <%= link_to 'Pokaż', practice, class: 'btn btn-md btn-primary' %>
+
+                            <% end %>
 			  </div>
 	      </div>
     </div>
