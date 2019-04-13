@@ -1,5 +1,10 @@
 class Practice < ApplicationRecord
 
+  validates :title, presence: true, length: {minimum: 3}
+  validates :subtitle, presence: true, length: {minimum: 3}
+  validates :boxinfo, presence: true, length: {minimum: 15}
+  validates :boxtitle, presence: true, length: {minimum: 3}
+
 	# has_attached_file :picone, styles: {large: "1500x500>", medium: "500x400>", thumb: "200x150#"}
 	# validates_attachment_content_type :picone, content_type: /\Aimage\/.*\z/
 
