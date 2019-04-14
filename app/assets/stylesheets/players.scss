@@ -1,0 +1,29 @@
+// Place all the styles related to the Players controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card
+{
+	-moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+	-ms-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+	-o-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+	padding: 6%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+}
+
+.card-title
+{
+	padding-top: 1rem;
+	text-transform: lowercase;
+	font-size: 14px;
+}
+
+.card-topper
+{
+	background-color: #050505;
+	min-height: 150px;
+}

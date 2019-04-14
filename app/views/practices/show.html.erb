@@ -2,39 +2,45 @@
   <div class="row", style="padding-top: 50px;">
       <div class="col-md-12">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tytuł:</strong>
-  <%= @practice.title %>
-</p>
+  <p>
+    <strong>Tytuł:</strong>
+    <%= @practice.title %>
+  </p>
 
-<p>
-  <strong>Kategoria:</strong>
-  <%= @practice.subtitle %>
-</p>
+  <p>
+    <strong>Kategoria:</strong>
+    <%= @practice.subtitle %>
+  </p>
 
-</div>
-    </div>
+  </div>
+      </div>
 
- <p>
-   <% if @practice.image.present? %>
-  <%= image_tag @practice.image.url %>
-  <% else %>
-  No image
-  <% end %>
-</p>
+   <p>
+     <% if @practice.image.present? %>
+    <%= image_tag @practice.image.url %>
+    <% else %>
+    No image
+    <% end %>
+  </p>
 
-<p>
-  <strong>Twórca:</strong>
-  <%= @practice.boxtitle %>
-</p>
+  <p>
+    <strong>Twórca:</strong>
+    <%= @practice.boxtitle %>
+  </p>
 
-<p>
-  <strong>Teść:</strong>
-  <%= @practice.boxinfo %>
-</p>
+  <p>
+    <strong>Teść:</strong>
+    <%= @practice.boxinfo %>
+  </p>
 
-<%= link_to 'Edytuj', edit_practice_path(@practice), class: 'btn btn-primary' %> 
-<%= link_to 'Powrót', practices_path, class: 'btn btn-success' %>
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-success' %>
+
+    <% if current_user && current_user.admin? %>
+
+      <%= link_to 'Edytuj', edit_practice_path(@practice), class: 'btn btn-primary' %> 
+
+    <% end %>
+
 </section>

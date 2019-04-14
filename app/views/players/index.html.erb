@@ -1,0 +1,51 @@
+<section class="container pt-5">
+   <div class="row">
+      <div class="col-12">
+       
+        <p id="notice"><%= notice %></p>
+
+        <h2 class="text-center pt-4"><span class="badge badge-dark">Nasz Team</span></h2>
+      </div>
+
+      <% if current_user && current_user&.admin? %>
+
+          <%= link_to 'Nowy wpis', new_player_path, class: 'btn btn-info'  %>
+
+      <% end %>
+
+  </div>
+
+      <div class="row", style="padding-top: 30px;">
+
+          <% @players.each do |player| %>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+              <div class="card"> 
+                <div class="card-topper">
+                  <% if player.image.present? %>
+                    <%= image_tag player.image.url(:thumb), style: "width:100%" %>
+                  <% else %>
+                    No image
+                  <% end %>
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">
+                      <%= player.name %>
+                    </h4>
+                            <% if current_user && current_user&.admin? %>
+
+                              <%= link_to 'Pokaż', player, class: 'btn btn-sm btn-primary' %>
+                              <%= link_to 'Edytuj', edit_player_path(player), class: 'btn btn-sm btn-info' %>
+                              <%= link_to 'Usuń', player, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+
+                                <% else %>
+
+                                  <%= link_to 'Pokaż', player, class: 'btn btn-md btn-primary' %>
+
+                                <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+     
+</section>

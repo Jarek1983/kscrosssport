@@ -1,6 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
-    include Cloudinary::CarrierWave
+  include Cloudinary::CarrierWave
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -34,7 +34,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
 
   version :thumb do
-    process resize_to_fit: [64, 64, :transparent]
+    process resize_to_fit: [200, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

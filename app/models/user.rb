@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :practices, foreign_key: :user_id
   has_many :carousels, foreign_key: :user_id
+  has_many :players, foreign_key: :user_id
 
 end

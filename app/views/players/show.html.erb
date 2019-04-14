@@ -1,0 +1,29 @@
+<div class="row" style="margin-left: 1rem; margin-right: 1rem; padding-bottom: 0.5rem">
+  <div class="col"> </div>
+    <div class="col-10">
+
+        <p>
+          <% if @player.image.present? %>
+            <%= image_tag @player.image.url %>
+          <% else %>
+            No image
+          <% end %> 
+        </p>  
+        <p>
+          <strong>Imię:</strong>
+            <%= @player.name %>
+        </p>
+        <p>
+          <strong>Opis:</strong>
+            <%= @player.description %>
+        </p>
+        <p>
+          <strong>Osiągnięcia:</strong>
+            <%= @player.achievement %>
+        </p>
+    
+          <%= link_to 'Powrót', players_path, class: 'btn btn-md btn-info' %>
+        
+    </div>
+  <div class="col"> </div>
+</div>

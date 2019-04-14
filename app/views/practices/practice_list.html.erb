@@ -12,7 +12,7 @@
 		</div>
 		<div class="col-md-6">
 			<% if @practices.count < 6 %>
-			Przepraszam, to jest ostatnia wiadomości 
+			Przepraszam, to jest ostatnia wiadomości <br>
 			<!-- Sorry, this is the last practices. -->
 			Jesteś na <%= @page + 1%> z <%= @num_pages.to_i%> wiadomości.<br>
 			<% else %>
@@ -37,11 +37,11 @@
 	       <div class="col-md-12 col-lg-6 col-xl-4">
 	        <div class="card"> 
 	          <div class="card-topper">
-	          <% if practice.image.present? %>
-	          <%= image_tag practice.image.url(:thumb) %>
-	          <% else %>
-	          No image
-	          <% end %>
+		          <% if practice.image.present? %>
+		          	<%= image_tag practice.image.url(:thumb), style: "width:100%;" %>
+		          <% else %>
+		          	No image
+		          <% end %>
 	          </div>
 			  <div class="card-block">
 			       <h4 class="card-title">
