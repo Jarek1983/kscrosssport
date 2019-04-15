@@ -33,4 +33,4 @@
 public/system/
 .env
 config/database.yml
-
+db/seeds.rb
