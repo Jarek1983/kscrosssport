@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  president: MyString
+  vice_president: MyString
+  treasure: MyString
+  description: MyText
+
+two:
+  president: MyString
+  vice_president: MyString
+  treasure: MyString
+  description: MyText
