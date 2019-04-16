@@ -1,0 +1,44 @@
+<section class="container pt-5">
+    <div class="row pt-5">
+        <div class="col-12">
+
+        <h3>Zostaw wiadomość</h3>
+
+       </div>
+     </div>
+
+      <%= form_with(model: @message, local: true, html: {multipart: true}) do |f| %>
+        <% if @message.errors.any? %>
+          <div id="error_explanation">
+            <h3><%= pluralize(@message.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+            <ul>
+            <% @message.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :message %><br />
+          <%= f.text_area :body %>
+        </div>
+
+        <div>
+          <%= f.hidden_field :user_id, value: session[:user_id] %>
+        </div> 
+
+        <div class="actions">
+          <%= f.submit "Send"%>
+        </div>
+      <% end %>
+</section>

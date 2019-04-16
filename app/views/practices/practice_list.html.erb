@@ -38,7 +38,7 @@
 	        <div class="card"> 
 	          <div class="card-topper">
 		          <% if practice.image.present? %>
-		          	<%= image_tag practice.image.url(:thumb), style: "width:100%;" %>
+		          	<%= image_tag practice.image.url, style: "width:100%; height:200px;object-fit:cover;" %>
 		          <% else %>
 		          	No image
 		          <% end %>
