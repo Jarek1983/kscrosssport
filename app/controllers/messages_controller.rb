@@ -10,9 +10,10 @@ class MessagesController < ApplicationController
 
 	def create
       @message = Message.new(message_params)
-      @message.user = current_user
+      @user = current_user
       	 
       if @message.save
+      	MessageMailer.welcome_email(@user, @message.body).deliver_later
       	flash[:notice] = "Wysłałeś wiadomość"
 	    redirect_to root_path
 

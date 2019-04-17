@@ -30,7 +30,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-public/system/
+/public/system/
 .env
-config/database.yml
-db/seeds.rb
+/config/database.yml
+/db/seeds.rb
+/config/environments
