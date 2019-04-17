@@ -12,42 +12,42 @@
     </div>
   <% end %>
 
-<div class="row">
+<div class="row pt-5">
   <div class="col-12">
 
-  <div class="field">
-    <%= form.label :Tytuł %><br>
-    <%= form.text_field :title, style:"width:100%" %>
+  <div class="field p-3 text-center">
+    <h3><%= form.label :Tytuł %></h3>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field p-3 text-center">
     <%= form.label :Kategoria %><br>
-    <%= form.text_field :subtitle, style:"width:100%" %>
+    <%= form.text_field :subtitle, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field p-3 text-center">
     <%= form.label :Tekst %><br>
-    <%= form.text_area :boxinfo, style:"width:100%" %>
+    <%= form.text_area :boxinfo, class: "form-control", style: "height:200px;" %>
   </div>
 
   </div>
 </div>
 
-<div class="row", style="margin-top:1rem;">
+<div class="row p-3">
 
       <div class="col-md-4">
-        <div class="card"> 
+        <div class="card text-center"> 
           <div class="card-topper">
             <div class="field">
               <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
-              <%= form.file_field :image, style:"color:#eeeeee;"  %>
+              <%= form.file_field :image, class: "form-control", style:"color:#eeeeee;"  %>
             </div>
           </div>
           <div class="card-block">
             <h4 class="card-title">
-              <div class="field">
+              <div class="field text-center">
                 <%= form.label :Autor %><br>
-                <%= form.text_field :boxtitle, style: "width:100%" %>
+                <%= form.text_field :boxtitle, class: "form-control" %>
               </div>
             </h4>
 
@@ -61,8 +61,8 @@
 </div>
   <div class="row", style="margin-top:1rem; padding-bottom: 0.5rem">
     <div class="col-md-12">
-      <%= form.submit 'Utwórz', class: "btn btn-warning" %>
-      <%= link_to 'Powrót', practices_path, class: 'btn btn-info' %>
+      <%= form.submit 'Utwórz', class: "btn btn-md btn-warning" %>
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-md btn-info' %>
     </div>
   </div>
 <% end %>

@@ -1,7 +1,7 @@
 .footer { 
     position: absolute; 
     left: 0 ; right: 0; bottom: 0; 
-    height: 60px;
+    height: 70px;
 }
 
 .footer p {
@@ -32,26 +32,26 @@
     	left: 0 ; right: 0; bottom: 0; 
     	height: 100px;}
 	.footer p {
-		font-size: 1.5rem;}    
+		font-size: 1.1rem;}    
 }
 
 @media only screen and (max-width: 991px),
 (min-device-width: 768px) and (max-device-width: 991px) {
 	.footer { 
     	position: absolute; 
-    	left: 0 ; right: 0; bottom: 0; 
+    	left: 0 ; right: 10; bottom: 0; 
     	height: 140px;}
 	.footer p {
-		font-size: 1.75rem;}    
+		font-size: 1.2rem;}    
 }
 
 @media only screen and (max-width: 767px),
 (min-device-width: 100px) and (max-device-width: 767px) {
 	.footer { 
     	position: absolute; 
-    	left: 0 ; right: 0; bottom: 0; 
+    	left: 0 ; right: 20; bottom: 0; 
     	height: 160px;}
 	.footer p {
-		font-size: 2rem;}    
+		font-size: 1.3rem;}    
 }
 

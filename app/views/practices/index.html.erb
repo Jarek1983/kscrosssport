@@ -28,9 +28,9 @@
 
                             <% if current_user && current_user&.admin? %>
 
-                              <%= link_to 'Pokaż', practice, class: 'btn btn-sm btn-primary' %>
-                              <%= link_to 'Edytuj', edit_practice_path(practice), class: 'btn btn-sm btn-info' %>
-                              <%= link_to 'Usuń', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+                              <%= link_to 'Pokaż', practice, class: 'btn btn-md btn-primary' %>
+                              <%= link_to 'Edytuj', edit_practice_path(practice), class: 'btn btn-md btn-info' %>
+                              <%= link_to 'Usuń', practice, method: :delete, data: { confirm: 'Napewno chcesz usunąć?' }, class: 'btn btn-md btn-danger' %>
 
                             <% else %>
 
@@ -46,11 +46,11 @@
   
         <div class="practice-bottom">
 
-          <%= link_to 'Więcej', practice_list_practices_path, class: 'btn btn-primary' %>
+          <%= link_to 'Więcej', practice_list_practices_path, class: 'btn btn-md btn btn-primary' %>
 
           <% if current_user && current_user&.admin? %>
 
-          <%= link_to 'Nowy wpis', new_practice_path, class: 'btn btn-info'  %>
+          <%= link_to 'Nowy wpis', new_practice_path, class: 'btn btn-md btn btn-info'  %>
 
           <% end %>
 
