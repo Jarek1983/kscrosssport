@@ -34,4 +34,5 @@
 .env
 /config/database.yml
 /db/seeds.rb
-
+/config/environments/development.rb
+/config/environments/production.rb
