@@ -12,35 +12,35 @@
     </div>
   <% end %>
 
-<div class="row">
+<div class="row pt-5">
   <div class="col-12">
 
-  <div class="field">
-    <%= form.label :Imię %><br>
-    <%= form.text_field :name, style:"width:100%" %>
+  <div class="field p-3 text-center">
+    <h2 class="alert alert-success"><%= form.label :Imię %></h2>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Opis %><br>
-    <%= form.text_field :description, style:"width:100%" %>
+  <div class="field p-3 text-center">
+    <h2 class="alert alert-info"><%= form.label :Opis %></h2>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Osiągnięcia %><br>
-    <%= form.text_area :achievement, style:"width:100%" %>
+  <div class="field p-3 text-center">
+    <h2 class="alert alert-danger"><%= form.label :Osiągnięcia %></h2>
+    <%= form.text_area :achievement, class: "form-control", style: "height:200px;"%>
   </div>
 
   </div>
 </div>
 
-<div class="row", style="margin-top:1rem;">
+<div class="row p-3">
 
-      <div class="col-md-4">
-        <div class="card"> 
+      <div class="col-12">
+        <div class="card text-center"> 
           <div class="card-topper">
             <div class="field">
-              <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
-              <%= form.file_field :image, style:"color:#eeeeee;"  %>
+              <%= form.label :Zdjęcie %>
+              <%= form.file_field :image, class: "form-control" %>
             </div>
           </div>
           <div class="card-block">
@@ -52,10 +52,9 @@
         </div>
       </div>
 </div>
-  <div class="row", style="margin-top:1rem; padding-bottom: 0.5rem">
-    <div class="col-md-12">
-      <%= form.submit 'Utwórz', class: "btn btn-warning" %>
-      <%= link_to 'Powrót', players_path, class: 'btn btn-info' %>
+  <div class="row mt-1 pb-5">
+    <div class="col-md-12 pb-5">
+      <%= form.submit 'Utwórz', class: "btn btn-lg btn-warning" %>
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-lg btn-info' %>
     </div>
-  </div>
 <% end %>

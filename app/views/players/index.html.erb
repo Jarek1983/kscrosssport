@@ -1,4 +1,4 @@
-<section class="container pt-5">
+<section class="container pt-5 pb-5">
    <div class="row">
       <div class="col-12">
        
@@ -15,7 +15,7 @@
 
   </div>
 
-      <div class="row", style="padding-top: 30px;">
+      <div class="row pt-2 pb-5">
 
           <% @players.each do |player| %>
             <div class="col-md-12 col-lg-6 col-xl-4">
@@ -27,15 +27,15 @@
                     No image
                   <% end %>
                 </div>
-                <div class="card-block">
+                <div class="card-block text-center">
                     <h4 class="card-title text-center text-capitalize">
                       <%= player.name %>
                     </h4>
                             <% if current_user && current_user&.admin? %>
 
-                              <%= link_to 'Pokaż', player, class: 'btn btn-sm btn-primary' %>
-                              <%= link_to 'Edytuj', edit_player_path(player), class: 'btn btn-sm btn-info' %>
-                              <%= link_to 'Usuń', player, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+                              <%= link_to 'Pokaż', player, class: 'btn btn-md btn-primary' %>
+                              <%= link_to 'Edytuj', edit_player_path(player), class: 'btn btn-md btn-info' %>
+                              <%= link_to 'Usuń', player, method: :delete, data: { confirm: 'Czy napewno usunąć?' }, class: 'btn btn-md btn-danger' %>
 
                                 <% else %>
 
