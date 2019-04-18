@@ -1,10 +1,12 @@
-<div class="row mx-1 pt-5">
-  <div class="col"> </div>
-    <div class="col-10 pt-5">
+<section class="container pt-5 pb-5">
+  <div class="row pt-5">
+      <div class="col-12">
+
+          <p id="notice"><%= notice %></p>
 
         <p>
           <% if @player.image.present? %>
-            <%= image_tag @player.image.url %>
+            <%= image_tag @player.image.url, class: "responsive_img2"%>
           <% else %>
             No image
           <% end %> 
@@ -22,8 +24,17 @@
             <%= @player.achievement %>
         </p>
     
-          <%= link_to 'Powrót', players_path, class: 'btn btn-md btn-info' %>
+         <div class="pb-5">
+
+            <%= link_to 'Powrót', players_path, class: 'btn btn-lg btn-info' %>
+
+                <% if current_user && current_user.admin? %>
+
+            <%= link_to 'Edytuj', edit_player_path(@player), class: 'btn btn-lg btn-primary' %> 
+
+                <% end %>
+
+          </div>
         
     </div>
-  <div class="col"> </div>
 </div>

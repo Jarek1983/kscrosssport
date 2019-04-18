@@ -1,6 +1,6 @@
 <% if @about.errors.any? %>
-  <div class="alert alert-danger" role="alert" id="error_explanation">
-    <h4 class="alert-heading">
+  <div class="alert alert-danger pt-5" role="alert" id="error_explanation">
+    <h4 class="alert-heading pt-5">
     	<%= pluralize(@about.errors.count, 'error') %> prohibited this article from being save: 
     </h4>
     <hr/>
@@ -16,27 +16,27 @@
   <div class="row pt-5">
       <div class="col-12 pt-5">
 
-<h2>Edytuj opis</h2>
-<%= form_for @about, html: {multipart: true} do |f| %>
-	<p>
-		<%= f.label :Prezes %><br>
-		<%= f.text_field :president, class: 'form-control',style: "height:50px;" %>
-	<p>
-		<%= f.label :Viceprezes %><br>
-		<%= f.text_field :vice_president, class: 'form-control',style: "height:50px;" %>
-	</p>
-	<p>
-		<%= f.label :Skarbnik%><br>
-		<%= f.text_field :treasure, class: 'form-control',style: "height:50px;" %>
-	</p>
-	<div class="pb-5">
-		<%= f.submit "Zapisz", class: 'btn btn-lg btn-success' %>
+		<h2>Edytuj opis</h2>
+		<%= form_for @about, html: {multipart: true} do |f| %>
+			<p>
+				<%= f.label :Prezes %><br>
+				<%= f.text_field :president, class: 'form-control',style: "height:50px;" %>
+			<p>
+				<%= f.label :Viceprezes %><br>
+				<%= f.text_field :vice_president, class: 'form-control',style: "height:50px;" %>
+			</p>
+			<p>
+				<%= f.label :Skarbnik%><br>
+				<%= f.text_field :treasure, class: 'form-control',style: "height:50px;" %>
+			</p>
+			<div class="pb-5">
+				<%= f.submit "Zapisz", class: 'btn btn-lg btn-success' %>
 
-		<%= link_to 'Powrót', about_index_path, class: 'btn btn-lg btn-info' %>
-	</div>
+				<%= link_to 'Powrót', about_index_path, class: 'btn btn-lg btn-info' %>
+			</div>
 
-		<% end %>
-	</div>
+		  <% end %>
+	  </div>
 </div>
 
 </section>

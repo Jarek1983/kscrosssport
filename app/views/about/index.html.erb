@@ -1,45 +1,45 @@
-<section class="container pt-5">
-	<div class="row pt-5">
+<section class="container pt-5 pb-5">
+	<div class="row pt-5 pb-5">
     	<div class="col-12">
 
                 <% @abouts.each do |about| %>
                 
-                <h4 class="font-italic">Prezes:
+                <h4 class="font-italic size">Prezes:
                   <span class="badge badge-dark"><%= about.president %></span>
                 </h4>
 
-                <h4 class="font-italic">Vice-prezes:
+                <h4 class="font-italic size">Vice-prezes:
                   <span class="badge badge-primary"><%= about.vice_president %></span>
                 </h4>  
 
-                <h4 class="font-italic">Skarbnik:
+                <h4 class="font-italic size">Skarbnik:
                   <span class="badge badge-success"><%= about.treasure %></span>
                 </h4>
 
 
                 <% end %>
 
-                <h4 class="font-italic">O nas: </h4>
+                <h4 class="font-italic size">O nas: </h4>
             
-            	<div class="text-muted font-italic">    
+            	<div class="text-muted text-justify font-italic pb-5">    
 	                <p>Jesteśmy stowarzyszeniem non - profit. Promujemy mieszane dyscypliny sportowe takie jak crossfit i triatlon</p>
 
-					<p>- naszym celem jest aktywizacja mieszkańców powiatu wodzisławskiego i okolic do czynnego uprawiania sportu.</p>
-					<p>- skupiamy się głównie na dyscyplinach mieszanych, gdyż cieszą się one w tym czasie największą popularnością.</p>
-					<p>- zachęcamy ambitne osoby do podjęcia wyzwania pracy nad sobą i doskonalenia się poprzez dbałość o ciało kondycję i zdrowie.</p>
-					<p>- podchodzimy do pracy nad ciałem kompleksowo poprzez treningi oraz dietę w ramach współpracy z instytucjami zajmującymi się tymi zagadnieniami.</p>
-					<p>- oferujemy wspólne treningi, wiedzę, pomoc i wsparcie trenerów oraz liczne profity i korzystne rabaty przy korzystaniu z usług zaprzyjaźnionych firm.</p>
-     			</div>
+        					<p>- naszym celem jest aktywizacja mieszkańców powiatu wodzisławskiego i okolic do czynnego uprawiania sportu.</p>
+        					<p>- skupiamy się głównie na dyscyplinach mieszanych, gdyż cieszą się one w tym czasie największą popularnością.</p>
+        					<p>- zachęcamy ambitne osoby do podjęcia wyzwania pracy nad sobą i doskonalenia się poprzez dbałość o ciało kondycję i zdrowie.</p>
+        					<p>- podchodzimy do pracy nad ciałem kompleksowo poprzez treningi oraz dietę w ramach współpracy z instytucjami zajmującymi się tymi zagadnieniami.</p>
+        					<p>- oferujemy wspólne treningi, wiedzę, pomoc i wsparcie trenerów oraz liczne profity i korzystne rabaty przy korzystaniu z usług zaprzyjaźnionych firm.</p>
+             	</div>
 
 
            	        <div>
 
-	              			<%= link_to 'Powrót', root_path, class: "btn btn-primary" %>
+	              			<%= link_to 'Powrót', root_path, class: "btn btn-lg btn-primary" %>
 
 	          			
 	          			<% if current_user && current_user&.admin? %>
 
-	                        <%= link_to 'Edytuj', edit_about_path(id: 1), class: 'btn btn-info' %>
+	                        <%= link_to 'Edytuj', edit_about_path(id: 1), class: 'btn btn-lg btn-info' %>
 	                    <% end %>
 
                     </div>
