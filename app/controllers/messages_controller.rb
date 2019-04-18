@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
 
 	def create
       @message = Message.new(message_params)
-      @user = current_user
+      # @user = current_user
       	 
       if @message.save
       	MessageMailer.welcome_email(@user, @message.body).deliver_later
