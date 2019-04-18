@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
       # @user = current_user
       	 
       if @message.save
-      	MessageMailer.welcome_email(@user, @message.body).deliver_later
+      	MessageMailer.with(message: @message).welcome_email.deliver_later
       	flash[:notice] = "Wysłałeś wiadomość"
 	    redirect_to root_path
 
@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
 private
 
 	def message_params
-		params.require(:message).permit(:name, :email, :body, :user_id)
+		params.require(:message).permit(:name, :email, :body)
 	end
 
 end
