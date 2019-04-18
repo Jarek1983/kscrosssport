@@ -39,14 +39,14 @@
         <div class="card text-center"> 
           <div class="card-topper">
             <div class="field">
-              <%= form.label :Zdjęcie, style:"color:#eeeeee;" %>
-              <%= form.file_field :image, class: "form-control", style:"color:#eeeeee;"  %>
+              <%= form.label :Zdjęcie %>
+              <%= form.file_field :image, class: "form-control" %>
             </div>
           </div>
           <div class="card-block">
             <h4 class="card-title">
               <div class="field text-center">
-                <%= form.label :Autor %>
+               <h3 class="alert alert-primary"><%= form.label :Autor %></h3>
                 <%= form.text_field :boxtitle, class: "form-control" %>
               </div>
             </h4>
@@ -61,8 +61,8 @@
 </div>
   <div class="row mt-1 pb-5">
     <div class="col-md-12 pb-5">
-      <%= form.submit 'Utwórz', class: "btn btn-md btn-warning" %>
-      <%= link_to 'Powrót', practices_path, class: 'btn btn-md btn-info' %>
+      <%= form.submit 'Utwórz', class: "btn btn-lg btn-warning" %>
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-lg btn-info' %>
     </div>
   </div>
 <% end %>

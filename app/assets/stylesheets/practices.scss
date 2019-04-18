@@ -23,7 +23,7 @@
 
 .card-topper
 {
-	background-color: #050505;
+	background-color: #F5F5DC;
 	min-height: 150px;
 }
 
@@ -35,4 +35,42 @@
 .form-control {
 	width: 100%;
 	background-color: #F5F5DC;
+}
+
+.responsive_img {
+	width:50%; 
+	height:300px;
+	object-fit:cover;
+}
+
+@media only screen and (max-width: 1199px),
+(min-device-width: 992px) and (max-device-width: 1199px) {
+	.responsive_img {
+		width:80%; 
+		height:100%;
+		object-fit:cover;}
+}
+
+@media only screen and (max-width: 991px),
+(min-device-width: 768px) and (max-device-width: 991px) {
+	.responsive_img {
+		width:100%; 
+		height:100%;
+		object-fit:cover;}
+}
+
+@media only screen and (max-width: 767px),
+(min-device-width: 100px) and (max-device-width: 767px) {
+	.responsive_img {
+		width:100%; 
+		height:100%;
+		object-fit:cover;}
+}  
+
+@media only screen and (max-width: 576px),
+(min-device-width: 100px) and (max-device-width: 576px) {
+	.responsive_img {
+		width:100%; 
+		height:100%;
+		object-fit:cover;}
 }

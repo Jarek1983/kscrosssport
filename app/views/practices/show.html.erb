@@ -1,6 +1,6 @@
-<section class="container">
-  <div class="row", style="padding-top: 50px;">
-      <div class="col-md-12">
+<section class="container pt-5 pb-5">
+  <div class="row pt-5">
+      <div class="col-12">
 
   <p id="notice"><%= notice %></p>
 
@@ -19,7 +19,7 @@
 
    <p>
      <% if @practice.image.present? %>
-    <%= image_tag @practice.image.url %>
+    <%= image_tag @practice.image.url, class: "responsive_img" %>
     <% else %>
     No image
     <% end %>
@@ -31,16 +31,18 @@
   </p>
 
   <p>
-    <strong>Teść:</strong>
+    <strong>Treść:</strong>
     <%= @practice.boxinfo %>
   </p>
 
-      <%= link_to 'Powrót', practices_path, class: 'btn btn-success' %>
+  <div class="pb-5">
+      <%= link_to 'Powrót', practices_path, class: 'btn btn-lg btn-success' %>
 
     <% if current_user && current_user.admin? %>
 
-      <%= link_to 'Edytuj', edit_practice_path(@practice), class: 'btn btn-primary' %> 
+      <%= link_to 'Edytuj', edit_practice_path(@practice), class: 'btn btn-lg btn-primary' %> 
 
     <% end %>
+  </div>
 
 </section>

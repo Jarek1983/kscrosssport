@@ -1,4 +1,4 @@
-<section class="container pt-5">
+<section class="container pt-5 pb-5">
 	<div class="row pt-5 mt-5">
 		
 		<div class="col-md-6"><h2><u>Wiadomości</u></h2></div>
@@ -10,7 +10,7 @@
 	<% end %>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-6">
 			<% if @practices.count < 6 %>
 			Przepraszam, to jest ostatnia wiadomości <br>
 			<!-- Sorry, this is the last practices. -->
@@ -22,11 +22,11 @@
 		</div>
 			<div class="col-md-6">
 		<% if @practices.count >= 6 %>
-			<%= link_to 'Next', practice_list_practices_path(:page => @next_page), class: "btn-sm btn-info floatr", style: "margin: 2px;" %>
+			<%= link_to 'Następny', practice_list_practices_path(:page => @next_page), class: "btn-md btn-info floatr", style: "margin: 2px;" %>
 		<% end %>
 			<% if @page > 0 %>
 
-			<%= link_to 'Previous', practice_list_practices_path(:page => @prev_page), class: "btn-sm btn-info floatr", style: "margin: 2px;" %>
+			<%= link_to 'Poprzedni', practice_list_practices_path(:page => @prev_page), class: "btn-md btn-info floatr", style: "margin: 2px;" %>
 			<% end %>
 			
 		</div>
@@ -43,15 +43,15 @@
 		          	No image
 		          <% end %>
 	          </div>
-			  <div class="card-block">
+			  <div class="card-block text-center">
 			       <h4 class="card-title text-center text-capitalize">
 			          <%= practice.boxtitle %>
 			       </h4>
                         <% if current_user && current_user&.admin? %>
 
-                          <%= link_to 'Pokaż', practice, class: 'btn btn-sm btn-primary' %>
-                          <%= link_to 'Edytuj', edit_practice_path(practice), class: 'btn btn-sm btn-info' %>
-                          <%= link_to 'Usuń', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+                          <%= link_to 'Pokaż', practice, class: 'btn btn-md btn-primary' %>
+                          <%= link_to 'Edytuj', edit_practice_path(practice), class: 'btn btn-md btn-info' %>
+                          <%= link_to 'Usuń', practice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-md btn-danger' %>
 
                             <% else %>
 
