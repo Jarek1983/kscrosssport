@@ -22,7 +22,7 @@ class PracticesController < ApplicationController
     @page = params['page'].to_i
     @next_page = @page + 1 unless Practice.count < 6
     @prev_page = @page - 1 unless @page == 0
-    @practices = Practice.all.order("created_at DESC").limit(6).offset(7)
+    @practices = Practice.all.order("created_at DESC").limit(6).offset(@page*6)
   end
 
   # GET /practices/1
