@@ -5,7 +5,6 @@ class Practice < ApplicationRecord
   validates :boxinfo, presence: true, length: {minimum: 15}
   validates :boxtitle, presence: true, length: {minimum: 3}
   validates :image, presence: true
-  validates :image_second, presence: true
 
   # validate :image_size_validation
  
