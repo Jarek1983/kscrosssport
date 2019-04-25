@@ -26,6 +26,22 @@
   </p>
 
   <p>
+     <% if @practice.image_second.present? %>
+    <%= image_tag @practice.image_second.url, class: "responsive_img" %>
+    <% else %>
+    No image
+    <% end %>
+  </p>
+
+  <p>
+     <% if @practice.image_third.present? %>
+    <%= image_tag @practice.image_third.url, class: "responsive_img" %>
+    <% else %>
+    No image
+    <% end %>
+  </p>
+
+  <p>
     <strong>Twórca:</strong>
     <%= @practice.boxtitle %>
   </p>

@@ -5,6 +5,7 @@ class Practice < ApplicationRecord
   validates :boxinfo, presence: true, length: {minimum: 15}
   validates :boxtitle, presence: true, length: {minimum: 3}
   validates :image, presence: true
+  validates :image_second, presence: true
 
   # validate :image_size_validation
  
@@ -20,6 +21,8 @@ class Practice < ApplicationRecord
 
 	# Carriewave
   	mount_uploader :image, ImageUploader
+    mount_uploader :image_second, ImageUploader
+    mount_uploader :image_third, ImageUploader
 
 	def self.search(params)
 		practices = Practice.where("title LIKE ? or subtitle LIKE ? or boxtitle LIKE ? or boxinfo LIKE ?", 
