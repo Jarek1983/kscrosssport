@@ -1,6 +1,6 @@
 class PracticesController < ApplicationController
   before_action :find_practice, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index, :practice_list]
+  before_action :authenticate_user!, except: [:show, :index, :practice_list, :search]
 
   # GET /practices
   # GET /practices.json
@@ -22,7 +22,7 @@ class PracticesController < ApplicationController
     @page = params['page'].to_i
     @next_page = @page + 1 unless Practice.count < 6
     @prev_page = @page - 1 unless @page == 0
-    @practices = Practice.all.order("created_at DESC").limit(6).offset(@page*6)
+    @practices = Practice.all.order("created_at DESC").limit(6).offset(7)
   end
 
   # GET /practices/1
