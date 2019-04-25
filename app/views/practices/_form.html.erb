@@ -22,7 +22,7 @@
 
   <div class="field p-3 text-center">
     <h2 class="alert alert-info"><%= form.label :Kategoria %></h2>
-    <%= form.text_field :subtitle, class: "form-control" %>
+    <%= form.select :subtitle, options_for_select(['Sprzęt', 'Zawody', 'Ogłoszenie', 'Trening', 'Komunikat']), class: "form-control" %>
   </div>
 
   <div class="field p-3 text-center">
@@ -55,7 +55,7 @@
             <h4 class="card-title">
               <div class="field text-center">
                <h3 class="alert alert-primary"><%= form.label :Autor %></h3>
-                <%= form.text_field :boxtitle, class: "form-control" %>
+                <%= form.select :boxtitle, options_for_select(['Michał', 'Marta', 'Tomek', 'Jarek']), class: "form-control" %>
               </div>
             </h4>
 
