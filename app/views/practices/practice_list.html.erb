@@ -14,10 +14,10 @@
 			<% if @practices.count < 6 %>
 			Przepraszam, to jest ostatnia strona <br>
 			<!-- Sorry, this is the last practices. -->
-		<!-- 	Jesteś na <%= @page + 1%> z <%= @num_pages.to_i%> podstron.<br>  -->
+		<!--     Jesteś na <%=@num_pages.to_i%> z <%= @num_pages.to_i%> podstron.<br> -->
 			<% else %>
 			W dziale znajduje się <%= @allpractices %> wiadomości<br>
-		<!-- 	Jesteś na <%= (@page + 1)%> z <%= @num_pages.to_i%> podstron.<br> -->
+		    Jesteś na <%= (@page + 1)%> z <%= @num_pages.to_i%> podstron.<br>
 			<% end %>
 		</div>
 			<div class="col-md-6">
