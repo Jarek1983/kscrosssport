@@ -9,7 +9,8 @@
 
       <% if current_user && current_user&.admin? %>
 
-          <%= link_to 'Nowy wpis', new_player_path, class: 'btn btn-info'  %>
+        <div class="p-4">  <%= link_to 'Nowy wpis', new_player_path, class: 'btn btn-info'  %>
+        </div>
 
       <% end %>
 
