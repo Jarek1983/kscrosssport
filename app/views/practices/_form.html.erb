@@ -16,7 +16,7 @@
   <div class="col-12">
 
   <div class="field p-3 text-center">
-    <h2 class="alert alert-success"><%= form.label :Tytuł %></h2>
+    <h2 class="alert alert-info"><%= form.label :Tytuł %></h2>
     <%= form.text_field :title, class: "form-control" %>
   </div>
 
@@ -26,7 +26,7 @@
   </div>
 
   <div class="field p-3 text-center">
-    <h2 class="alert alert-danger"><%= form.label :Tekst %></h2>
+    <h2 class="alert alert-info"><%= form.label :Tekst %></h2>
     <%= form.text_area :boxinfo, class: "form-control", style: "height:200px;" %>
   </div>
 
@@ -54,7 +54,7 @@
           <div class="card-block">
             <h4 class="card-title">
               <div class="field text-center">
-               <h3 class="alert alert-primary"><%= form.label :Autor %></h3>
+               <h3 class="alert alert-info"><%= form.label :Autor %></h3>
                 <%= form.select :boxtitle, options_for_select(['Michał', 'Marta', 'Tomek', 'Jarek']), class: "form-control" %>
               </div>
             </h4>
