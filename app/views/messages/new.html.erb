@@ -1,8 +1,8 @@
 <section class="container pt-5">
     <div class="row pt-5">
-        <div class="col-12">
+        <div class="col-12 pt-5">
 
-        <h3 class="text-center">Zostaw wiadomość</h3>
+        <h3 class="text-center pt-5">Formularz kontaktowy</h3>
 
        </div>
      </div>
@@ -21,16 +21,16 @@
         <% end %>
 
         <div class="field p-3 text-center">
-          <h2><%= f.label :Imię %></h2>
-          <%= f.text_field :name, class: "form-control" %>
+          <h3><%= f.label :Imię %></h3>
+          <%= f.text_field :name, class: "form-control", style: "height:50px;"%>
         </div>
         <div class="field p-3 text-center">
-          <h2 class="alert alert-success"><%= f.label :Email %></h2>
-          <%= f.text_field :email, class: "form-control" %>
+          <h3><%= f.label :Email %></h3>
+          <%= f.text_field :email, class: "form-control", style: "height:50px;"%>
         </div>
         <div class="field p-3 text-center">
-          <h2 class="alert alert-success"><%= f.label :Wiadomość %></h2>
-          <%= f.text_area :body, class: "form-control", style: "height:200px;" %>
+          <h3><%= f.label :Wiadomość %></h3>
+          <%= f.text_area :body, class: "form-control", style: "height:200px; width:100%;"%>
         </div>
 
         <div class="row mt-1 pb-5 text-center">
