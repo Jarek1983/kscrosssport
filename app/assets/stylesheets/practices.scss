@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.card
-{
+.card {
 	-moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
 	-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
 	-ms-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
@@ -14,15 +13,13 @@
 	margin-bottom: 2%;
 }
 
-.card-title
-{
+.card-title {
 	padding-top: 1rem;
 	text-transform: lowercase;
 	font-size: 14px;
 }
 
-.card-topper
-{
+.card-topper {
 	background-color: #F5F5DC;
 	min-height: 150px;
 }
@@ -30,11 +27,6 @@
 .practice-bottom {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-}
-
-.form-control {
-	width: 100%;
-	background-color: #F5F5DC;
 }
 
 .responsive_img {
@@ -47,7 +39,8 @@
 	.responsive_img {
 		width:80%; 
 		height:100%;
-		object-fit:cover;}
+		object-fit:cover;
+	}
 }
 
 @media only screen and (max-width: 991px),
@@ -55,7 +48,12 @@
 	.responsive_img {
 		width:100%; 
 		height:100%;
-		object-fit:cover;}
+		object-fit:cover;
+	}
+
+	.card-title {
+		font-size: 1.6rem;
+	}
 }
 
 @media only screen and (max-width: 767px),
@@ -63,7 +61,12 @@
 	.responsive_img {
 		width:100%; 
 		height:100%;
-		object-fit:cover;}
+		object-fit:cover;
+	}
+
+	.card-title {
+		font-size: 1.8rem;
+	}
 }  
 
 @media only screen and (max-width: 576px),
@@ -71,5 +74,10 @@
 	.responsive_img {
 		width:100%; 
 		height:100%;
-		object-fit:cover;}
+		object-fit:cover;
+	}
+
+	.card-title {
+		font-size: 2rem;
+	}
 }
