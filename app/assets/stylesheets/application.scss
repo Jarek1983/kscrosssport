@@ -22,7 +22,6 @@
 @import "about";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 
-
 html {height: 100%;}
 
 body {
@@ -185,7 +184,7 @@ h6 {
 (min-device-width: 100px) and (max-device-width: 767px) {
 	body {
     width: 100%;
-    min-height:100%; 
+    min-height:110%; 
     position:relative; 
     padding-bottom:[footer-height] 
     }

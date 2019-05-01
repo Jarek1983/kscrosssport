@@ -6,5 +6,7 @@
     <%= f.input :image_second, label: "Zdjęcie" %>
     <%= f.input :image_third, label: "Zdjęcie" %>
     <%= f.input :boxtitle, label: 'Podaj autora:', collection: ['Michał', 'Marta', 'Tomek', 'Jarek'] %>
+    <%= link_to 'Powrót', practices_path, class: 'btn btn-md btn-success' %>
     <%= f.submit "Zapisz", class: 'btn btn-success' %>
+
 <% end %>
