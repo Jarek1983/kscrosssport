@@ -1,7 +1,7 @@
  <%= simple_form_for @practice do |f| %>
-    <%= f.input :title, label: 'Podaj imię/pseudonim:', as: :wysihtml5 %>
+    <%= f.input :title, label: 'Podaj imię/pseudonim:' %>
     <%= f.input :subtitle, label: 'Podaj kategorię:', collection: ['Sprzęt', 'Zawody', 'Ogłoszenie', 'Trening', 'Komunikat'] %>
-    <%= f.input :boxinfo, label: 'Podaj osiągnięcia:', as: :wysihtml5 %> 
+    <%= f.input :boxinfo, label: 'Podaj treść:', as: :wysihtml5 %> 
     <%= f.input :image, label: "Zdjęcie" %>
     <%= f.input :image_second, label: "Zdjęcie" %>
     <%= f.input :image_third, label: "Zdjęcie" %>

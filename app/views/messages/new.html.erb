@@ -1,4 +1,4 @@
-<section class="container-fluid pt-5">
+<section class="container-fluid pt-5 mx-auto">
     <div class="row pt-5">
         <div class="col-12 pt-5">
 
@@ -8,8 +8,8 @@
      </div>
 
   <%= simple_form_for @message do |f| %>
-    <%= f.input :name, label: 'Podaj imię:', as: :wysihtml5 %>
-    <%= f.input :email, label: 'Wprowadź email:', as: :wysihtml5 %>
+    <%= f.input :name, label: 'Podaj imię:' %> 
+    <%= f.input :email, input_html: { autocomplete: 'email' } %>
     <%= f.input :body, label: 'Wpisz wiadomość:', as: :wysihtml5 %> 
     <%= f.submit "Wyślij", class: 'btn btn-success' %>
   <% end %>
