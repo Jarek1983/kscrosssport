@@ -47,7 +47,7 @@ class PlayersController < ApplicationController
 private
 
   def find_player
-    @player = Player.find(params[:id])
+    @player = Player.friendly.find(params[:id])
   end
 
 	def player_params

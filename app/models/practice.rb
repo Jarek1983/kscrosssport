@@ -23,6 +23,9 @@ class Practice < ApplicationRecord
     mount_uploader :image_second, ImageUploader
     mount_uploader :image_third, ImageUploader
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
 	def self.search(params)
 		practices = Practice.where("title LIKE ? or subtitle LIKE ? or boxtitle LIKE ? or boxinfo LIKE ?", 
 				"%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",) if params[:search].present?

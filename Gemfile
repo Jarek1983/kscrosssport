@@ -36,6 +36,7 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
 gem 'devise', '~> 4.3'
+gem 'friendly_id', '~> 5.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
