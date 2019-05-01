@@ -1,76 +1,10 @@
- 
-<%= form_with(model: practice, local: true, html: {multipart: true}) do |form| %>
-  <% if practice.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(practice.errors.count, "error") %> prohibited this practice from being saved:</h2>
-
-      <ul>
-      <% practice.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<div class="row pt-5">
-  <div class="col-12">
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Tytuł %></h2>
-    <%= form.text_field :title, class: "form-control" %>
-  </div>
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Kategoria %></h2>
-    <%= form.select :subtitle, options_for_select(['Sprzęt', 'Zawody', 'Ogłoszenie', 'Trening', 'Komunikat']), class: "form-control" %>
-  </div>
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Tekst %></h2>
-    <%= form.text_area :boxinfo, class: "form-control", style: "height:200px;" %>
-  </div>
-
-  </div>
-</div>
-
-<div class="row p-3">
-
-      <div class="col-12">
-        <div class="card text-center"> 
-          <div class="card-topper">
-            <div class="field">
-              <%= form.label :Zdjęcie %>
-              <%= form.file_field :image, class: "form-control" %>
-            </div>
-            <div class="field">
-              <%= form.label :Zdjęcie %>
-              <%= form.file_field :image_second, class: "form-control" %>
-            </div>
-            <div class="field">
-              <%= form.label :Zdjęcie %>
-              <%= form.file_field :image_third, class: "form-control" %>
-            </div>
-          </div>
-          <div class="card-block">
-            <h4 class="card-title">
-              <div class="field text-center">
-               <h3 class="alert alert-info"><%= form.label :Autor %></h3>
-                <%= form.select :boxtitle, options_for_select(['Michał', 'Marta', 'Tomek', 'Jarek']), class: "form-control" %>
-              </div>
-            </h4>
-
-<!--              <div>
-                <%= form.hidden_field :user_id, value: session[:user_id] %>
-            </div> -->
-
-          </div>
-        </div>
-      </div>
-</div>
-  <div class="row mt-1 pb-5">
-    <div class="col-md-12 pb-5">
-      <%= form.submit 'Utwórz', class: "btn btn-lg btn-warning" %>
-      <%= link_to 'Powrót', practices_path, class: 'btn btn-lg btn-info' %>
-    </div>
-  </div>
+ <%= simple_form_for @practice do |f| %>
+    <%= f.input :title, label: 'Podaj imię/pseudonim:', as: :wysihtml5 %>
+    <%= f.input :subtitle, collection: ['Sprzęt', 'Zawody', 'Ogłoszenie', 'Trening', 'Komunikat'] %>
+    <%= f.input :boxinfo, label: 'Podaj osiągnięcia:', as: :wysihtml5 %> 
+    <%= f.input :image, label: "Zdjęcie" %>
+    <%= f.input :image_second, label: "Zdjęcie" %>
+    <%= f.input :image_third, label: "Zdjęcie" %>
+    <%= f.input :boxtitle, collection: ['Michał', 'Marta', 'Tomek', 'Jarek'] %>
+    <%= f.submit "Zapisz", class: 'btn btn-success' %>
 <% end %>

@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
+//= require bootstrap-wysihtml5
 //= require_tree .

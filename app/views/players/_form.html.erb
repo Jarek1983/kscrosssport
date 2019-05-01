@@ -1,60 +1,9 @@
- 
-<%= form_with(model: player, local: true, html: {multipart: true}) do |form| %>
-  <% if player.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
-
-      <ul>
-      <% player.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<div class="row pt-5">
-  <div class="col-12">
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Imię %></h2>
-    <%= form.text_field :name, class: "form-control" %>
-  </div>
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Opis %></h2>
-    <%= form.text_field :description, class: "form-control" %>
-  </div>
-
-  <div class="field p-3 text-center">
-    <h2 class="alert alert-info"><%= form.label :Osiągnięcia %></h2>
-    <%= form.text_area :achievement, class: "form-control", style: "height:200px;"%>
-  </div>
-
-  </div>
-</div>
-
-<div class="row p-3">
-
-      <div class="col-12">
-        <div class="card text-center"> 
-          <div class="card-topper">
-            <div class="field">
-              <%= form.label :Zdjęcie %>
-              <%= form.file_field :image, class: "form-control" %>
-            </div>
-          </div>
-          <div class="card-block">
-<!--              <div>
-                <%= form.hidden_field :user_id, value: session[:user_id] %>
-            </div> -->
-
-          </div>
-        </div>
-      </div>
-</div>
-  <div class="row mt-1 pb-5">
-    <div class="col-md-12 pb-5">
-      <%= form.submit 'Utwórz', class: "btn btn-lg btn-warning" %>
-      <%= link_to 'Powrót', practices_path, class: 'btn btn-lg btn-info' %>
-    </div>
+ <%= simple_form_for @player do |f| %>
+  <%= f.input :name, label: 'Podaj imię/pseudonim:', as: :wysihtml5 %>
+  <%= f.input :description, label: 'Wprowadź opis:', as: :wysihtml5 %>
+  <%= f.input :achievement, label: 'Podaj osiągnięcia:', as: :wysihtml5 %> 
+  <%= f.input :image, label: "Zdjęcie" %>
+  <%= f.submit "Zapisz", class: 'btn btn-success' %>
 <% end %>
+
+

@@ -37,6 +37,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
 gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.1'
+gem 'bootstrap-wysihtml5-rails'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
