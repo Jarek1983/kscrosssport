@@ -39,6 +39,7 @@ gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.1'
 gem 'bootstrap-wysihtml5-rails'
 gem 'simple_form'
+gem 'mail', '~> 2.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
