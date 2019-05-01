@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
 */
-@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
+
 @import "bootstrap";
 @import "practices";
 @import "footer";
@@ -20,6 +20,7 @@
 @import "login";
 @import "players";
 @import "about";
+@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 
 
 html {height: 100%;}

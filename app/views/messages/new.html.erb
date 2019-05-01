@@ -10,7 +10,7 @@
   <%= simple_form_for @message do |f| %>
     <%= f.input :name, label: 'Podaj imię:' %> 
     <%= f.input :email, input_html: { autocomplete: 'email' } %>
-    <%= f.input :body, label: 'Wpisz wiadomość:', as: :wysihtml5 %> 
+    <%= f.input :body, label: 'Wpisz wiadomość:' %> 
     <%= f.submit "Wyślij", class: 'btn btn-success' %>
   <% end %>
 
