@@ -40,6 +40,7 @@ gem 'friendly_id', '~> 5.1'
 gem 'simple_form'
 gem 'mail', '~> 2.7'
 gem 'trix-rails', require: 'trix'
+gem "recaptcha", require: "recaptcha/rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
