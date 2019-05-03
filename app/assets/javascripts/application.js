@@ -13,14 +13,9 @@
 //= require rails-ujs
 //= require jquery3
 //= require popper
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/wysihtml5x-toolbar.js
-//= require bootstrap-wysihtml5/handlebars.runtime.min.js
-
-//= require bootstrap-wysihtml5/minimum
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
+//= require trix
 //= require_tree .
 
-$(elem).wysihtml5({ toolbar:{ "fa": true } });

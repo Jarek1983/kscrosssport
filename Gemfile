@@ -37,10 +37,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
 gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.1'
-gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 gem 'simple_form'
 gem 'mail', '~> 2.7'
-gem "recaptcha", require: "recaptcha/rails"
+gem 'trix-rails', require: 'trix'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
