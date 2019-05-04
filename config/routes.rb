@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 resources :players
 resources :about 
 resources :messages
-root 'messages#new'
+# root 'messages#new'
 # match "message/new" => "message#new", as: :message_new, via: [:get, :post]
 # get 'messages/index'
 # post 'messages/create', to: 'messages#create' 
