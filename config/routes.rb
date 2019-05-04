@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'practices#index'
+  # root 'practices#index'
   resources :practices do
   	collection do
   		get :search
