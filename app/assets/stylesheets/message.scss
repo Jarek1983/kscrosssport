@@ -3,6 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .captcha {
-	padding-left: 480px;
+	padding-left: 400px;
 }
+
+@media only screen and (max-width: 1199px),
+(min-device-width: 992px) and (max-device-width: 1199px) {
+	.captcha {
+		padding-left: 320px;
+	}
+}
+
+@media only screen and (max-width: 991px),
+(min-device-width: 768px) and (max-device-width: 991px) {
+	.captcha {
+		padding-left: 200px;
+	}
+}
+
+@media only screen and (max-width: 767px),
+(min-device-width: 100px) and (max-device-width: 767px) {
+	.captcha {
+		padding-left: 180px;
+	}
+}  
 

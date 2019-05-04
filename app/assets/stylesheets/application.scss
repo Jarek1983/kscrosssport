@@ -116,14 +116,19 @@ h6 {
 
 .form-control {
 	width: 80%;
+	height: 50px;
 	margin: auto;
 	border-radius: 10px;
-	   background-color: #F5F5DC;
+	background-color: #F5F5DC;
+	font-size: 1.2rem;
 }
 
 .field {
 	width: 50%;
 	margin: auto;
+	font-style: italic;
+	font-size: 1.4rem;
+	padding-top: 5px;
 }
 
 .form-control2 {
@@ -145,11 +150,13 @@ h6 {
 		margin: auto;
 		border-radius: 10px;
 		height: 80px !important;
+		font-size: 1.4rem;
 	}
 
 	.field {
 		width: 60%;
 		margin: auto;
+		font-size: 1.6rem;
 	  }
 }
 
@@ -167,6 +174,7 @@ h6 {
 		margin: auto;
 		border-radius: 10px;
 		height: 100px !important;
+		font-size: 1.6rem;
 	}
 
 	.field {
@@ -175,18 +183,18 @@ h6 {
 	  }
 
 	.nav-item {
-	font-size: 20px;
+		font-size: 20px;
 	}
 
 	.nav-item2 {
-	font-size: 20px;
+		font-size: 20px;
 	}
 }
 
 @media only screen and (max-width: 767px),
 (min-device-width: 100px) and (max-device-width: 767px) {
 	body {
-    width: 100%;
+    width: 110%;
     min-height:110%; 
     position:relative; 
     padding-bottom:[footer-height] 
@@ -204,6 +212,7 @@ h6 {
 		width: 100%;
 		border-radius: 10px;
 	    height: 120px !important;
+	    font-size: 1.8rem;
     }
 
 	.field {

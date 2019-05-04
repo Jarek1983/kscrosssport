@@ -1,6 +1,6 @@
 <div class="container flex-column text-center d-flex justify-content-center login" style="padding-top: 10%">
 
-  <div class="p-2">
+  <div class="pt-5">
     <h1>Zaloguj się</h1>
 
   </div>
@@ -9,12 +9,12 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", style: "height:50px;" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
       </div>
 
       <div class="field">
         <%= f.label :hasło %><br />
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", style: "height:50px;" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
