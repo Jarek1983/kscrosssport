@@ -36,4 +36,3 @@
 /db/seeds.rb
 /config/environments
 /config/secrets.yml
-/config/initializers/recaptcha.rb
