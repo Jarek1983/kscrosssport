@@ -55,7 +55,7 @@ class PracticesController < ApplicationController
 
     respond_to do |format|
       if @practice.save
-        format.html { redirect_to @practice, notice: 'Practice was successfully created.' }
+        format.html { redirect_to @practice, notice: 'Utworzyłeś artykuł' }
         format.json { render :show, status: :created, location: @practice }
       else
         format.html { render :new }
@@ -69,7 +69,7 @@ class PracticesController < ApplicationController
   def update
     respond_to do |format|
       if @practice.update(practice_params)
-        format.html { redirect_to @practice, notice: 'Practice was successfully updated.' }
+        format.html { redirect_to @practice, notice: 'Zaktualizowałeś artykuł' }
         format.json { render :show, status: :ok, location: @practice }
       else
         format.html { render :edit }

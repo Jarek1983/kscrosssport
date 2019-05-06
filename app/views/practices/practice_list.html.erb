@@ -16,18 +16,18 @@
 			<!-- Sorry, this is the last practices. -->
 <!-- 			Jesteś na <%= @page + 1%> z <%= @num_pages.to_i%> podstronie.<br> -->
 			<% else %>
-            Na stronie znajduje się <%= @allpractices %> wiadomości<br>
+            <h3>Na stronie znajduje się <%= @allpractices %> wiadomości</h3>
 	<!-- 		<-- Jesteś na <%= (@page + 1)%> z <%= @num_pages.to_i%> podstronie.<br> --> 
 			<% end %>
 		</div>
-			<div class="col-md-6">
+			<div class="col-6", style="font-size: 1.2rem; font-style: italic;">
 		<% if @practices.count >= 6 %>
-			<%= link_to 'Następny', practice_list_practices_path(:page => @next_page), class: "btn-md btn-info floatr", style: "margin: 2px;" %>
+			<%= link_to 'Następny', practice_list_practices_path(:page => @next_page), class: "btn-md btn-warning floatr", style: "padding: 4px; margin: 2px;" %>
 		<% end %>
-			<% if @page > 0 %>
-
-			<%= link_to 'Poprzedni', practice_list_practices_path(:page => @prev_page), class: "btn-md btn-info floatr", style: "margin: 2px;" %>
-			<% end %>
+		
+		<% if @page > 0 %>
+			<%= link_to 'Poprzedni', practice_list_practices_path(:page => @prev_page), class: "btn-md btn-info floatr", style: "padding: 4px; margin: 2px;" %>
+		<% end %>
 			
 		</div>
 	</div>
