@@ -39,3 +39,6 @@
 /config/environments/test.rb
 /config/secrets.yml
 /config/initializers/recaptcha.rb
+localhost.key
+localhost.crt
+
