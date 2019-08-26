@@ -19,9 +19,9 @@ class Practice < ApplicationRecord
 	# validates_attachment_content_type :picone, content_type: /\Aimage\/.*\z/
 
 	# Carriewave
-  	mount_uploader :image, ImageUploader
-    mount_uploader :image_second, ImageUploader
-    mount_uploader :image_third, ImageUploader
+  mount_uploader :image, ImageUploader
+  mount_uploader :image_second, ImageUploader
+  mount_uploader :image_third, ImageUploader
 
   extend FriendlyId
   friendly_id :title, use: :slugged

@@ -23,29 +23,30 @@
             
             	<div class="text-muted text-justify font-italic pb-5"> 
 
-                  <p>Klub Sportowy "Cross - Sport" powstał w styczniu 2010 roku.</p>
-                  <p>Założycielami są członkowie K.S. "Forma", m.in. Irek Stachowski, Michał i Marta Nosiadek. Klub powstał z pomocą śp. Zbyszka Marszałkowskiego i za jego namową oraz wparciem.</p> 
-                  <p>Celem klubu jest promocja sportów mieszanych. Jak mówi prezes Cross – Sportu, Michał Nosiadek: „Chcemy promować na terenie powiatu wodzisławskiego i okolic; Crossfit – bardzo modny ostatnimi czasy rodzaj treningu siłowego połączony z elementami treningu kardio oraz triathlon.</p>
-                  <p>Triathlon jest dyscypliną znajdującą coraz więcej zwolenników w naszym kraju, a na naszych terenach nie ma zbyt dużo imprez o tym charakterze.</p>
-                  <p>Zależy nam na organizacji imprez promujących ruch i aktywność fizyczną pod różnymi postaciami.</p>   
-        					<p>Zachęcamy ambitne osoby do podjęcia wyzwania pracy nad sobą i doskonalenia się poprzez dbałość o ciało kondycję i zdrowie.</p>
-        					<p>Podchodzimy do pracy nad ciałem kompleksowo poprzez treningi oraz dietę w ramach współpracy z instytucjami zajmującymi się tymi zagadnieniami.</p>
-        					<p>Oferujemy wspólne treningi, wiedzę, pomoc i wsparcie trenerów oraz liczne profity i korzystne rabaty przy korzystaniu z usług zaprzyjaźnionych firm.</p>
+                <p>Klub Sportowy "Cross - Sport" powstał w styczniu 2010 roku.</p>
+                <p>Założycielami są członkowie K.S. "Forma", m.in. Irek Stachowski, Michał i Marta Nosiadek. Klub powstał z pomocą śp. Zbyszka Marszałkowskiego i za jego namową oraz wparciem.</p> 
+                <p>Celem klubu jest promocja sportów mieszanych. Jak mówi prezes Cross – Sportu, Michał Nosiadek: „Chcemy promować na terenie powiatu wodzisławskiego i okolic; Crossfit – bardzo modny ostatnimi czasy rodzaj treningu siłowego połączony z elementami treningu kardio oraz triathlon.</p>
+                <p>Triathlon jest dyscypliną znajdującą coraz więcej zwolenników w naszym kraju, a na naszych terenach nie ma zbyt dużo imprez o tym charakterze.</p>
+                <p>Zależy nam na organizacji imprez promujących ruch i aktywność fizyczną pod różnymi postaciami.</p>
+                <p>Zachęcamy ambitne osoby do podjęcia wyzwania pracy nad sobą i doskonalenia się poprzez dbałość o ciało kondycję i zdrowie.</p>
+                <p>Podchodzimy do pracy nad ciałem kompleksowo poprzez treningi oraz dietę w ramach współpracy z instytucjami zajmującymi się tymi zagadnieniami.</p>
+                <p>Oferujemy wspólne treningi, wiedzę, pomoc i wsparcie trenerów oraz liczne profity i korzystne rabaty przy korzystaniu z usług zaprzyjaźnionych firm.</p>
              	</div>
 
 
-           	        <div>
+           	    <div>
 
-	              			<%= link_to 'Powrót', root_path, class: "btn btn-lg btn-primary" %>
+	                  <%= link_to 'Powrót', root_path, class: "btn btn-lg btn-primary" %>
 
 	          			
-	          			<% if current_user && current_user&.admin? %>
+	          		  <% if current_user && current_user&.admin? %>
 
-	                        <%= link_to 'Edytuj', edit_about_path(id: 1), class: 'btn btn-lg btn-info' %>
-	                    <% end %>
+	                  <%= link_to 'Edytuj', edit_about_path(id: 1), class: 'btn btn-lg btn-info' %>
+	                    
+                  <% end %>
 
-                    </div>
+                </div>
 
-    	</div>
-	</div>
+    </div>
+  </div>
 </section>

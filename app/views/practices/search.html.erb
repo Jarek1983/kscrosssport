@@ -12,10 +12,10 @@
 						<% @practices.each do |practice| %>
 					<tr>
 						<td>
-							<% if practice.image.present? %>
-          					<%= image_tag practice.image.url, style: "width:100%;height:300px;object-fit:cover;" %>
+					        <% if practice.image.present? %>
+          					  <%= image_tag practice.image.url, style: "width:100%;height:300px;object-fit:cover;" %>
           					<% else %>
-          						No image
+          					  No image
           					<% end %>	
           				</td>
 
@@ -29,6 +29,7 @@
 						</td>
 					</tr>
 							<% c = c + 1 %>
+							
 							<% end %>
 							<h3><span class="badges badges-info">Wykryto <%= c %> odpowiedzi</span></h3>
 					</tbody>

@@ -1,9 +1,11 @@
 <%= simple_form_for @player do |f| %>
+
   <%= f.input :name, label: 'Podaj imię/pseudonim:' %>
   <%= f.input :description, label: 'Wprowadź opis:', as: :trix_editor %>
   <%= f.input :achievement, label: 'Podaj osiągnięcia:', as: :trix_editor %> 
   <%= f.input :image, label: "Zdjęcie" %>
   <%= link_to 'Powrót', players_path, class: 'btn btn-md btn-info' %>
   <%= f.submit "Zapisz", class: 'btn btn-success' %>
+  
 <% end %>
 

@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-  	@players = Player.all.order("created_at DESC").limit(6)
+    @players = Player.all.order("created_at DESC").limit(6)
   end
 
   def new
@@ -15,11 +15,11 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     @player.user = current_user
 
-	  if @player.save
-	    redirect_to player_path(@player)
-	  else
-	    render 'new'
-	  end
+    if @player.save
+      redirect_to player_path(@player)
+    else
+      render 'new'
+    end
 
   end
 
@@ -51,7 +51,7 @@ private
   end
 
 	def player_params
-		params.require(:player).permit(:name, :description, :achievement, :image, :user_id)
+    params.require(:player).permit(:name, :description, :achievement, :image, :user_id)
 	end
 
 end

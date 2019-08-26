@@ -5,6 +5,7 @@
         <p id="notice"><%= notice %></p>
 
         <h2 class="text-center pt-4"><span class="badge badge-dark">Nasz Team</span></h2>
+      
       </div>
 
       <% if current_user && current_user&.admin? %>
@@ -40,11 +41,11 @@
                               <%= link_to 'Edytuj', edit_player_path(player), class: 'btn btn-md btn-info' %>
                               <%= link_to 'Usuń', player, method: :delete, data: { confirm: 'Czy napewno usunąć?' }, class: 'btn btn-md btn-danger' %>
 
-                                <% else %>
+                            <% else %>
 
-                                  <%= link_to 'Pokaż', player, class: 'btn btn-md btn-primary' %>
+                              <%= link_to 'Pokaż', player, class: 'btn btn-md btn-primary' %>
 
-                                <% end %>
+                            <% end %>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
  <%= simple_form_for @practice do |f| %>
+ 
     <%= f.input :title, label: 'Podaj tytuł:' %>
     <%= f.input :subtitle, label: 'Podaj kategorię:', collection: ['Sprzęt', 'Zawody', 'Ogłoszenie', 'Trening', 'Komunikat'] %>
     <%= f.input :boxinfo, label: 'Podaj treść:', as: :trix_editor %> 

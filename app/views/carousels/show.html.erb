@@ -1,8 +1,12 @@
 <% if @slide.banner.present? %>
-   <%= image_tag @slide.banner.url(:large) %>
-  <% else %>
-   <h3> No image available</h3>
-  <% end %>
 
-   <h3><%= @slide.slidetitle1 %></h3> 
-   <h3><%= @slide.slidetitle1 %></h3> 
+  <%= image_tag @slide.banner.url(:large) %>
+
+<% else %>
+
+  <h3> No image available</h3>
+
+<% end %>
+
+  <h3><%= @slide.slidetitle1 %></h3> 
+  <h3><%= @slide.slidetitle1 %></h3> 

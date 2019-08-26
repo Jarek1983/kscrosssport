@@ -2,38 +2,38 @@
   <div class="row pt-5">
       <div class="col-12">
 
-  <p id="notice"><%= notice %></p>
+        <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Tytuł:</strong>
-    <%= @practice.title %>
-  </p>
+        <p>
+          <strong>Tytuł:</strong>
+          <%= @practice.title %>
+        </p>
 
-  <p>
-    <strong>Kategoria:</strong>
-    <%= @practice.subtitle %>
-  </p>
+        <p>
+          <strong>Kategoria:</strong>
+          <%= @practice.subtitle %>
+        </p>
 
-  </div>
       </div>
+  </div>
 
    <p>
-     <% if @practice.image.present? %>
-    <%= image_tag @practice.image.url, class: "responsive_img" %>
+    <% if @practice.image.present? %>
+      <%= image_tag @practice.image.url, class: "responsive_img" %>
     <% else %>
     No image
     <% end %>
   </p>
 
   <p>
-     <% if @practice.image_second.present? %>
-    <%= image_tag @practice.image_second.url, class: "responsive_img" %>
+    <% if @practice.image_second.present? %>
+      <%= image_tag @practice.image_second.url, class: "responsive_img" %>
     <% end %>
   </p>
 
   <p>
-     <% if @practice.image_third.present? %>
-    <%= image_tag @practice.image_third.url, class: "responsive_img" %>
+    <% if @practice.image_third.present? %>
+      <%= image_tag @practice.image_third.url, class: "responsive_img" %>
     <% end %>
   </p>
 

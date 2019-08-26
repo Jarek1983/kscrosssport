@@ -3,7 +3,7 @@ class AboutController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-  	@abouts = About.all
+    @abouts = About.all
   end
 
   def new
@@ -15,12 +15,13 @@ class AboutController < ApplicationController
     @about = About.new(player_params)
     @about.user = current_user
 
-	  if @about.save
-	    redirect_to about_path(@about)
-	  else
-	    render 'new'
-	  end
-   end
+    if @about.save
+      redirect_to about_path(@about)
+    else
+      render 'new'
+    end
+
+  end
 
   def show
   end
@@ -50,6 +51,6 @@ private
   end
 
   def about_params
-	params.require(:about).permit(:president, :vice_president, :treasure, :description, :user_id)
+    params.require(:about).permit(:president, :vice_president, :treasure, :description, :user_id)
   end
 end
